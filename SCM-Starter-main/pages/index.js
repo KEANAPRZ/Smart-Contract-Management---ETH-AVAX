@@ -83,7 +83,7 @@ export default function HomePage() {
 
     // Check to see if user is connected. If not, connect to their account
     if (!account) {
-      return <button onClick={connectAccount}>Please connect your Metamask wallet</button>
+      return <button onClick={connectAccount}><b style={{ backgroundColor: 'orange', color: 'white' ,fontSize: '20px' }}>Connect Your Metamask Wallet To Start</b></button>
     }
 
     if (balance == undefined) {
@@ -92,10 +92,10 @@ export default function HomePage() {
 
     return (
       <div>
-        <p>Your Account: {account}</p>
-        <p>Your Balance: {balance}</p>
-        <button onClick={deposit}>Deposit 1 ETH</button>
-        <button onClick={withdraw}>Withdraw 1 ETH</button>
+        <p style={{ color:'#94f0db', fontSize: '20px'}}>Your Account: <u>{account}</u></p>
+        <p style={{ color:'#94f0db', fontSize: '30px'}}>Your Balance: <b>{balance}</b></p>
+        <button style={{ backgroundColor: '#14c4b4', color: 'white',marginRight:'5px', fontSize: '15px' }} onClick={deposit}>Deposit 1 ETH</button>
+        <button style={{ backgroundColor: 'orange', color: 'white' ,fontSize: '15px' }} onClick={withdraw}>Withdraw 1 ETH</button>
       </div>
     )
   }
@@ -104,13 +104,12 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header><h1>Welcome to the Metacrafters ATM!</h1></header>
+      <header><h1 style={{ backgroundColor: '#fce4dc', color: '#2c3477'}}>SMART CONTRACT ATM!</h1></header>
       {initUser()}
       <style jsx>{`
-        .container {
-          text-align: center
-        }
-      `}
+     .container { text-align: center; border: 4px solid black; background-color: #587edf; padding: 30px; } `
+  
+    }
       </style>
     </main>
   )
