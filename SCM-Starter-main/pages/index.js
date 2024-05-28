@@ -123,22 +123,22 @@ export default function HomePage() {
 
     return (
       <div>
-        <p>Your Account: {account}</p>
-        <p>Your Balance: {balance}</p>
+        <p style={{ fontSize:'25px', textDecoration:'underline'}}>Your Account: {account}</p>
+        <p style={{ fontSize:'20px', fontWeight:'bold'}}>Your Balance: {balance}</p>
         <div>
           <input
             type="number"
             value={amountInput}
             onChange={(e) => setAmountInput(e.target.value)}
           />
-          <button style={{ backgroundColor: '#14c4b4', color: 'white',marginRight:'5px', fontSize: '15px' }}onClick={deposit}>Deposit</button>
-          <button style={{ backgroundColor: 'orange', color: 'white' ,fontSize: '15px' }} onClick={withdraw}>Withdraw</button>
+          <br></br>
+          <br></br>
+          <button style={{ backgroundColor: '#14c4b4', color: 'white',marginRight:'10px', fontSize: '20px' }}onClick={deposit}>Deposit</button>
+          <button style={{ backgroundColor: 'orange', color: 'white' ,fontSize: '20px' }} onClick={withdraw}>Withdraw</button>
         </div>
         <div>
-          <button onClick={calculateFactorial}>Calculate Factorial</button>
+          <button style={{ backgroundColor: 'green', color: 'white' ,fontSize: '20px', marginTop:'5px' }} onClick={calculateFactorial}>Calculate Factorial</button>
           {factorialResult && <p>{factorialResult}</p>}
-          <button onClick={checkPalindrome}>Check Palindrome</button>
-          {palindromeResult && <p>{palindromeResult}</p>}
         </div>
       
       </div>
